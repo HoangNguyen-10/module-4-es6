@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name
+            }
+
+            walk() {
+                return `${this.name} walks through 2 blocks`
+            }
+
+        }
+
+        class Programmer extends Person {
+            constructor(name, language) {
+                super(name)
+                this.language = language
+            }
+
+            set newLanguage(language) {
+                this.language = language
+
+            }
+
+            get newLanguage() {
+                return this.language
+            }
+
+            writeCode() {
+                return `${this.name} is learning new language ${this.language}`
+            }
+        }
+
+        const person = new Person('Huy')
+        const programmer = new Programmer('Long', 'java')
+
+        console.log(programmer.writeCode())
+        // console.log(person.walk())
+    </script>
+</body>
+
+</html>
